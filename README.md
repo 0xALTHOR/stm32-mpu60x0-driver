@@ -19,3 +19,17 @@ Automatic conversion from raw ADC values to physical units (g, dps, °C)
 | AD0 | GND / 3.3V |Low=0x68, High=0x69 |
 
 Check main_example.c for usage example.
+
+
+## Usage
+```c
+MPU60X0_t imu;
+float a[3], g[3], temp;
+
+// Initialize with I2C address 0x68
+if (MPU60X0_Init(&imu, &hi2c1, 0x68) == HAL_OK) {
+    while(1) {
+        MPU60X0_ReadData(&imu, a, g, &temp);
+        HAL_Delay(10);
+    }
+}
