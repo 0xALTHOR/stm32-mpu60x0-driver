@@ -33,3 +33,9 @@ if (MPU60X0_Init(&imu, &hi2c1, 0x68) == HAL_OK) {
         HAL_Delay(10);
     }
 }
+
+```
+
+Keynotes: Configure your I2C to 400kHz
+          If the AD0 pin is connected to GND, use address 0x68. If connected to VDD, use 0x69.
+          Ensure VDD is between 2.375V and 3.46V so you dont burn the chip!!
