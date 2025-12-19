@@ -37,8 +37,8 @@ if (MPU60X0_Init(&imu, &hi2c1, 0x68) == HAL_OK) {
 ```
 
 ## Important Notes
-* [cite_start]**I2C Speed**: Configure your I2C peripheral to **400kHz (Fast Mode)**[cite: 69, 145, 517].
+*Configure your I2C peripheral to **400kHz (Fast Mode).
 * **Addressing**:
-  * [cite_start]If **AD0** is connected to **GND**, use address `0x68`[cite: 331, 1174].
-  * [cite_start]If **AD0** is connected to **VDD**, use address `0x69`[cite: 331, 1174].
-* [cite_start]**Voltage**: Ensure **VDD** is between **2.375V and 3.46V** to avoid permanent damage[cite: 74, 137, 585, 600].
+  * If **AD0** is connected to **GND**, use address `0x68`.
+  * If **AD0** is connected to **VDD**, use address `0x69`.
+* **Voltage**: Ensure **VDD** is between **2.375V and 3.46V** so you dont burn your chip!!.
